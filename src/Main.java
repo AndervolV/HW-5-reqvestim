@@ -17,31 +17,27 @@ public class Main {
 //Задача 2 Чтобы не плодить переменные переменная clientOS взята из первой задачи
         int clientOs = 1;
         int clientDeviceYear = 2015;
-        if (clientDeviceYear <= 2015) {
-            if (clientOs == 0) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
-        } else if (clientDeviceYear > 2015) {
-            if (clientOS == 0) {
-                System.out.println("Устоновите версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Устоновите версию приложения для Android по ссылке");
-            }
+        if (clientDeviceYear <= 2015 && clientOs == 0) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
+        if (clientDeviceYear > 2015 && clientOs == 0) {
+
+            System.out.println("Устоновите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Устоновите версию приложения для Android по ссылке");
+        }
+
         System.out.println("Задача N3");
 //Задача 3
         System.out.println("Наставник! это задача не про условные операторы, а про циклы, которые мы еще будем изучать.");
         int leapYear = 2014;
-        if (leapYear >= 1584 && leapYear <= 2100) {
-            if (leapYear % 4 == 0 || leapYear % 400 == 0 && leapYear % 100 != 0) {
-                System.out.println(leapYear + " год является высокосным");
-            } else {
-                System.out.println(leapYear + " год не является высокосным");
-            }
+        if (leapYear >= 1584 && leapYear % 4 == 0) {
+
+            System.out.println(leapYear + " год является высокосным");
         } else {
-            System.out.println("В это время не было перехода на высокосный год");
+            System.out.println(leapYear + " год не является высокосным");
         }
         System.out.println("Задача N4");
 //Задача 4
@@ -63,46 +59,13 @@ public class Main {
         System.out.println("Задача N5");
 //Задача 5
         int month = 11;
-        switch (month) {
-            case 1:
-                System.out.println("Зима");
-                break;
-            case 2:
-                System.out.println("Зима");
-                break;
-            case 3:
-                System.out.println("Весна");
-                break;
-            case 4:
-                System.out.println("Весна");
-                break;
-            case 5:
-                System.out.println("Весна");
-                break;
-            case 6:
-                System.out.println("Лето");
-                break;
-            case 7:
-                System.out.println("Лето");
-                break;
-            case 8:
-                System.out.println("Лето");
-                break;
-            case 9:
-                System.out.println("Осень");
-                break;
-            case 10:
-                System.out.println("Осень");
-                break;
-            case 11:
-                System.out.println("Осень");
-                break;
-            case 12:
-                System.out.println("Зима");
-                break;
-            default:
-                System.out.println("Нет такого месяца");
-        }
-
+        String result = switch (month) {
+            case 1, 2, 12 -> "Зима";
+            case 3, 4, 5 -> "Весна";
+            case 6, 7, 8 -> "Лето";
+            case 9, 10, 11 -> "Осень";
+            default -> "Нет такого месяца";
+        };
+        System.out.println(result);
     }
 }
