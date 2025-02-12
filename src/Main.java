@@ -57,7 +57,7 @@ public class Main {
             System.out.println("Свыше 100 км доставки нет.");
         }
         System.out.println("Задача N5");
-//Задача 5
+//Задача 5 видимо так надо
         int month = 11;
         String result = switch (month) {
             case 1, 2, 12 -> "Зима";
