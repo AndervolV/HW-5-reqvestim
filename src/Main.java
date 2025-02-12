@@ -14,7 +14,7 @@ public class Main {
                 System.out.println("Unknown");
         }
         System.out.println("Задача N2");
-//Задача 2 Чтобы не плодить переменные переменная clientOS взята из первой задачи
+//Задача 2
         int clientOs = 1;
         int clientDeviceYear = 2015;
         if (clientDeviceYear <= 2015 && clientOs == 0) {
