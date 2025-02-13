@@ -15,30 +15,37 @@ public class Main {
         }
         System.out.println("Задача N2");
 //Задача 2
-        int clientOs = 1;
-        int clientDeviceYear = 2015;
-        if (clientDeviceYear <= 2015 && clientOs == 0) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        }
-        if (clientDeviceYear > 2015 && clientOs == 0) {
 
-            System.out.println("Устоновите версию приложения для iOS по ссылке");
-        } else {
-            System.out.println("Устоновите версию приложения для Android по ссылке");
+        int clientDeviceYear = 2015;
+        if (clientDeviceYear <= 2015) {
+            if (clientOS == 0)
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
+        }
+        if (clientDeviceYear > 2015) {
+            if (clientOS == 0) {
+
+                System.out.println("Устоновите версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Устоновите версию приложения для Android по ссылке");
+            }
         }
 
         System.out.println("Задача N3");
 //Задача 3
         System.out.println("Наставник! это задача не про условные операторы, а про циклы, которые мы еще будем изучать.");
-        int leapYear = 2014;
-        if (leapYear >= 1584 && leapYear % 4 == 0) {
+        int year = 1984;
+        int leapYear = year - 1584;
+        if (year >= 1584 && leapYear % 4 == 0 && leapYear % 100 != 0 || leapYear % 400 == 0) {
 
-            System.out.println(leapYear + " год является высокосным");
+            System.out.println(year + " год является высокосным");
         } else {
-            System.out.println(leapYear + " год не является высокосным");
+            System.out.println(year + " год не является высокосным");
         }
+
+
         System.out.println("Задача N4");
 //Задача 4
         int deliveryDistance = 95;
