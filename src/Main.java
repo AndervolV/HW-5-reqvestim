@@ -73,6 +73,7 @@ public class Main {
             case 9, 10, 11 -> "Осень";
             default -> "Нет такого месяца";
         };
+
         System.out.println(result);
     }
 }
